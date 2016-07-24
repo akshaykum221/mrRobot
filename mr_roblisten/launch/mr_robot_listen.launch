@@ -1,0 +1,8 @@
+<launch>
+
+  <node name="recognizer" pkg="pocketsphinx" type="recognizer.py" output="screen">
+    <param name="lm" value="$(find mr_robot_listen)/commands/mr_robot_commands.lm"/>
+    <param name="dict" value="$(find mr_robot_listen)/commands/mr_robot_commands.dic"/>
+  </node>
+  
+</launch>

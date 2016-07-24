@@ -1,0 +1,12 @@
+digraph G {
+"odom" -> "base_link"[label="Broadcaster: /Arduino\nAverage rate: 9.141 Hz\nMost recent transform: 1462862186.278 ( 0.025 sec old)\nBuffer length: 4.923 sec\n"];
+"camera_link" -> "camera_depth_frame"[label="Broadcaster: /camera_base_link\nAverage rate: 10.190 Hz\nMost recent transform: 1462862186.367 ( -0.064 sec old)\nBuffer length: 4.907 sec\n"];
+"base_link" -> "camera_link"[label="Broadcaster: /static_tf\nAverage rate: 10.190 Hz\nMost recent transform: 1462862186.393 ( -0.090 sec old)\nBuffer length: 4.907 sec\n"];
+"camera_depth_frame" -> "camera_depth_optical_frame"[label="Broadcaster: /camera_base_link2\nAverage rate: 10.191 Hz\nMost recent transform: 1462862186.367 ( -0.063 sec old)\nBuffer length: 4.906 sec\n"];
+"camera_link" -> "camera_rgb_frame"[label="Broadcaster: /camera_base_link1\nAverage rate: 10.190 Hz\nMost recent transform: 1462862186.367 ( -0.064 sec old)\nBuffer length: 4.907 sec\n"];
+"camera_rgb_frame" -> "camera_rgb_optical_frame"[label="Broadcaster: /camera_base_link3\nAverage rate: 10.191 Hz\nMost recent transform: 1462862186.368 ( -0.065 sec old)\nBuffer length: 4.906 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1462862186.303"[ shape=plaintext ] ;
+ }->"odom";
+}

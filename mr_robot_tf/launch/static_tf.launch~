@@ -1,0 +1,9 @@
+<!--  launch file to set tf --> 
+<launch>
+
+ <node pkg="tf" type="static_transform_publisher" name="static_tf" args="0 0 1 0 0 0 base_footprint camera_link  100" />
+ 
+  
+  
+
+</launch>

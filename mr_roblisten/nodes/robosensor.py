@@ -1,0 +1,48 @@
+#!/usr/bin/env python
+
+import rospy
+from geometry_msgs.msg import Twist
+from sensor_msgs.msg import Range
+from ros_arduino_msgs.msg import Analog
+from sound_play.libsoundplay import SoundClient
+from std_msgs.msg import String
+import sys 
+
+
+
+def callback(data):
+ temp = (5.0 * data.value * 100.0) / 1024;
+ global t 
+ t= str(temp)
+ t = t[:2]
+
+def talkback(msg):
+  global t
+  if msg.data == "what is the room temperature" :
+    soundhandle.say("temperature is " + t + " degree celsius", voice)
+    
+	 
+
+
+# if(data.range >= .79):
+#  t.linear.x = 0; t.linear.y = 0; t.linear.z = 0
+#  t.angular.x = 0; t.angular.y = 0; t.angular.z = 0
+#  twist_pub.publish(t)  
+#  soundhandle.say("obstacle found stopping now", voice)
+
+def cleanup(self):
+        rospy.loginfo("Shutting down sensor node...")
+
+
+if __name__ == '__main__':
+ rospy.init_node('robosensor')
+ voice = rospy.get_param("~voice", "voice_kal_diphone")
+ soundhandle = SoundClient()
+ #twist_pub = rospy.Publisher('cmd_vel', Twist, queue_size=1)
+ rospy.Subscriber('/recognizer/output', String, talkback)
+ rospy.Subscriber('/Arduino/sensor/temperature', Analog, callback)
+ rospy.spin()
+
+
+
+

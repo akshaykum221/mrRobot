@@ -1,0 +1,15 @@
+move forward
+move backward
+move back
+move straight
+turn left
+turn right
+rotate left
+rotate right
+stop
+halt
+turn on the lights
+lights off
+lights on
+what is the room temperature
+bring me the glass

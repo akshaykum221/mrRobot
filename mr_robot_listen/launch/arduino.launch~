@@ -1,0 +1,16 @@
+<launch>
+
+  <node name="recognizer" pkg="pocketsphinx" type="recognizer.py">
+    <param name="lm" value="$(find mr_robot_listen)/commands/mr_robot_commands.lm"/>
+    <param name="dict" value="$(find mr_robot_listen)/commands/mr_robot_commands.dic"/>
+  </node>
+
+  <node name="soundplay_node" pkg="sound_play" type="soundplay_node.py" output="screen"/>
+
+  <node name="talkback" pkg="mr_robot_listen" type="arduino.py" output="screen">
+        <rosparam file="$(find mr_robot_listen)/config/my_arduino_params.yaml" command="load" />
+  	<param name="voice" value="voice_kal_diphone"/>
+  	<param name="wavepath" value="$(find mr_robot_listen)/sounds"/>
+  </node>
+
+</launch>

@@ -1,0 +1,19 @@
+<!--  launch file to control robot using joystick  --> 
+<launch>
+
+  <node name="Arduino" pkg="ros_arduino_python" type="arduino_node.py" output="screen">
+        <rosparam file="$(find ros_arduino_python)/config/my_arduino_params.yaml" command="load" />
+  <!--	<remap from="odom" to="ardu/odom"/> -->
+  </node>
+
+<node name="joy" pkg="joy" type="joy_node" output="screen">
+        
+  </node>
+
+  <node name="joystick" pkg="mr_robot_nav" type="joy.py">
+ 
+  </node>
+
+  
+
+</launch>

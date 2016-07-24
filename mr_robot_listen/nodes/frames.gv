@@ -1,0 +1,15 @@
+digraph G {
+"camera_link" -> "camera_depth_frame"[label="Broadcaster: /camera_base_link\nAverage rate: 10.191 Hz\nMost recent transform: 1463802851.585 ( -0.011 sec old)\nBuffer length: 4.808 sec\n"];
+"camera_rgb_frame" -> "camera_rgb_optical_frame"[label="Broadcaster: /camera_base_link3\nAverage rate: 10.192 Hz\nMost recent transform: 1463802851.585 ( -0.011 sec old)\nBuffer length: 4.808 sec\n"];
+"camera_link" -> "camera_rgb_frame"[label="Broadcaster: /camera_base_link1\nAverage rate: 10.190 Hz\nMost recent transform: 1463802851.586 ( -0.012 sec old)\nBuffer length: 4.809 sec\n"];
+"camera_depth_frame" -> "camera_depth_optical_frame"[label="Broadcaster: /camera_base_link2\nAverage rate: 10.190 Hz\nMost recent transform: 1463802851.586 ( -0.012 sec old)\nBuffer length: 4.809 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /Arduino\nAverage rate: 9.127 Hz\nMost recent transform: 1463802851.548 ( 0.027 sec old)\nBuffer length: 4.821 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1463802851.574"[ shape=plaintext ] ;
+ }->"camera_link";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1463802851.574"[ shape=plaintext ] ;
+ }->"odom";
+}

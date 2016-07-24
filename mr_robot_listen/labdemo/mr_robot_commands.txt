@@ -1,0 +1,74 @@
+mister robot
+stop listening
+who are you
+how are you
+continue speech
+move forward
+move backward
+move back
+move left
+move right
+go forward
+go backward
+go back
+go left
+go right
+go straight
+come forward
+come backward
+come left
+come right
+turn left
+turn right
+rotate left
+rotate right
+faster
+speed up
+slower
+slow down
+quarter speed
+half speed
+full speed
+stop
+stop now
+halt
+get me the chips
+get me the biscuits
+get me the beer
+get me the glass
+get me the paper cup
+bring me the chips
+bring me the biscuits
+bring me the beer
+bring me the lemonade
+bring me the milo
+bring me the water
+bring me the yogurt
+bring me the seven up
+bring me the spoons
+bring me the glass
+good job
+thank you
+yes
+no
+follow me
+stop
+halt
+come with me
+abort
+kill
+panic
+help
+help me
+freeze
+turn off
+shut down
+cancel
+suhas
+akshay
+ashwin
+say my name
+turn on the lights
+measure distance
+lights off
+lights on

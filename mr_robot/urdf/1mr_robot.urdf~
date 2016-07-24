@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot name="materials">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.01" radius=".15"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+     <material name="brown">
+    <color rgba="0.570588235294 0.311764705882 0.004705882353 1.0"/>
+  </material>
+    </visual>
+  </link>
+
+  <link name="front_caster_base">
+    <visual>
+      <geometry>
+        <box size="0.05 0.055 0.07"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_to_front_caster_base" type="fixed">
+    <parent link="base_link"/>
+    <child link="front_caster_base"/>
+    <origin xyz="0.11 0 -.04"/>
+  </joint>
+
+ <link name="back_caster_base">
+    <visual>
+      <geometry>
+        <box size="0.05 0.055 0.07"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="base_to_back_caster_base" type="fixed">
+    <parent link="base_link"/>
+    <child link="back_caster_base"/>
+    <origin xyz="-0.11 0 -.04"/>
+  </joint>
+ 
+
+</robot>
+

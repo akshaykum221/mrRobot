@@ -1,0 +1,13 @@
+digraph G {
+"camera_rgb_frame" -> "camera_rgb_optical_frame"[label="Broadcaster: /camera_base_link3\nAverage rate: 10.193 Hz\nMost recent transform: 1462875975.776 ( -0.047 sec old)\nBuffer length: 4.906 sec\n"];
+"camera_link" -> "camera_rgb_frame"[label="Broadcaster: /camera_base_link1\nAverage rate: 10.194 Hz\nMost recent transform: 1462875975.795 ( -0.066 sec old)\nBuffer length: 4.905 sec\n"];
+"base_link" -> "camera_link"[label="Broadcaster: /static_tf\nAverage rate: 10.193 Hz\nMost recent transform: 1462875975.776 ( -0.047 sec old)\nBuffer length: 4.905 sec\n"];
+"odom" -> "base_link"[label="Broadcaster: /Arduino\nAverage rate: 8.968 Hz\nMost recent transform: 1462875975.709 ( 0.020 sec old)\nBuffer length: 4.907 sec\n"];
+"camera_depth_frame" -> "camera_depth_optical_frame"[label="Broadcaster: /camera_base_link2\nAverage rate: 10.193 Hz\nMost recent transform: 1462875975.776 ( -0.047 sec old)\nBuffer length: 4.905 sec\n"];
+"camera_link" -> "camera_depth_frame"[label="Broadcaster: /camera_base_link\nAverage rate: 10.195 Hz\nMost recent transform: 1462875975.748 ( -0.018 sec old)\nBuffer length: 4.806 sec\n"];
+"map" -> "odom"[label="Broadcaster: /rtabmap/rtabmap\nAverage rate: 20.204 Hz\nMost recent transform: 1462875975.732 ( -0.002 sec old)\nBuffer length: 4.900 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1462875975.730"[ shape=plaintext ] ;
+ }->"map";
+}

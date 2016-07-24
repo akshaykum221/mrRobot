@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0.1">
+<!-- basic_chat.aiml -->
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Well, hello!
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT IS THE ROOM TEMPERATURE</pattern>
+        <template>
+            
+        </template>
+    </category>
+    
+    <category>
+        <pattern>MOVE FORWARD</pattern>
+        <template>
+            MOVING NOW
+        </template>
+    </category>
+
+    <category>
+        <pattern>MOVE BACKWARD</pattern>
+        <template>
+            MOVING BACK
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHO ARE YOU</pattern>
+        <template>
+            I'm a bot, silly!
+        </template>
+    </category>
+
+    <category>
+        <pattern>TURN LEFT</pattern>
+        <template>
+            TURNED LEFT!
+        </template>
+    </category>
+
+    <category>
+        <pattern>TURN RIGHT</pattern>
+        <template>
+            TURNING RIGHT!
+        </template>
+    </category>
+
+    <category>
+        <pattern>STOP</pattern>
+        <template>
+            STOPPING NOW
+        </template>
+    </category>
+
+    <category>
+        <pattern>HALT</pattern>
+        <template>
+            STOPPING NOW
+        </template>
+    </category>
+
+    <category>
+        <pattern>ROTATE RIGHT</pattern>
+        <template>
+            TURNING RIGHT!
+        </template>
+    </category>
+    <category>
+        <pattern>ROTATE LEFT</pattern>
+        <template>
+            TURNING RIGHT!
+        </template>
+    </category>
+
+    <category>
+        <pattern>MOVE STRAIGHT</pattern>
+        <template>
+            TURNING RIGHT!
+        </template>
+    </category>
+    
+</aiml>
